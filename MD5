@@ -1,6 +1,6 @@
-0bfc1bfe4b05ad78f448c73b3d71283e *DESCRIPTION
+774a64f8bf309a6fc278631d54a330a7 *DESCRIPTION
 c1f1d34860ce76e7f2fe679062cf4e2e *NAMESPACE
-27f674a7f97b563fb3e65bb98bed80f4 *NEWS.md
+75537ec8bb4fbf65225143a95e935411 *NEWS.md
 f089fa32ba2ac0755c03ff7308122212 *R/add_overall.R
 d30d93df153a83d091f8ffa67bde2ac3 *R/complete_ae_data.R
 51b831f0c7eac41430602832581e1a3b *R/data.R
@@ -9,8 +9,8 @@ aabf80b06e64190ae30d245518a1dca0 *R/gtreg-package.R
 77cd574de52d219505080c697aad025d *R/reexport.R
 13a8eeda1fdb4a5732d75f54d3f4b26d *R/selectors.R
 1ae089848095248ce2a4905dfb6d30d6 *R/tbl_ae.R
-05e60ed34e817aabd6b0d7318b878ae2 *R/tbl_ae_count.R
-d9813b9e73e2a6d234ae6b78e16a13ab *R/tbl_ae_focus.R
+275d9aaecd787de7018342186e2c0c44 *R/tbl_ae_count.R
+a9e3b0f1cd877e1ca8d40dcc96ae8933 *R/tbl_ae_focus.R
 e493b8b67ccf7802047ed21b8854e40c *R/tbl_listing.R
 241f8fd3f7f310a2777af421539de7bf *R/tbl_reg_summary.R
 f85f9ab8c2a4a5472b472eaf0be4c745 *R/utils-tbl_ae.R
@@ -21,7 +21,7 @@ cdc61b90e074b0dc06a3129bf616409b *data/df_patient_characteristics.rda
 15d6c2248fe9093264a40718fa7b9fb1 *inst/WORDLIST
 59cdaf96f97eea4fcd3dd09dbb578081 *inst/doc/counting-methods.R
 5d166ef8957b0357fd755b2ac55b466c *inst/doc/counting-methods.Rmd
-045f4c2dfee855ffb88cecbc95dbca94 *inst/doc/counting-methods.html
+f107731e394e06286b185ddffc17b874 *inst/doc/counting-methods.html
 5063d8647eaac104cde7359c38c18c48 *man/add_overall_tbl_ae.Rd
 816bf500e03f3cbedf39cc539387b07a *man/df_adverse_events.Rd
 2d69b13465751c04b6184d42a8011a7b *man/df_patient_characteristics.Rd
@@ -61,8 +61,8 @@ fe6426830cb4cac9e5bc215714e161a8 *tests/testthat/test-complete_ae_data.R
 b98e4042c9d05681ea8290cff2f57a83 *tests/testthat/test-inline_text.R
 4da0a7b7cd9a7efb8b9a197d8a60b36a *tests/testthat/test-modify_header.R
 225d0d139121fe5f0e42c117b4807b7e *tests/testthat/test-tbl_ae.R
-8d8460a7a9581b8de7931f139bc75311 *tests/testthat/test-tbl_ae_count.R
-c98371d1e878b119544b59c94a06974f *tests/testthat/test-tbl_ae_focus.R
+bacb60e8f00658f3470c5e5738d8e08a *tests/testthat/test-tbl_ae_count.R
+593fe4ef4bc0aa590804b91b063c3635 *tests/testthat/test-tbl_ae_focus.R
 dfbce03bda5ab84be5384b12ead7d499 *tests/testthat/test-tbl_listing.R
 461a6d3df2fe5e58b8624e529cde2f67 *tests/testthat/test-tbl_reg_summary.R
 5d166ef8957b0357fd755b2ac55b466c *vignettes/counting-methods.Rmd
