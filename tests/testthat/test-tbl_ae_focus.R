@@ -79,17 +79,6 @@ test_that("tbl_ae_focus() works", {
   )
 
   expect_error(
-    df_adverse_events %>%
-      dplyr::rename(by = any_complication) %>%
-      tbl_ae_focus(
-        include = by,
-        id = patient_id,
-        ae = adverse_event,
-        soc = system_organ_class
-      )
-  )
-
-  expect_error(
     tbl_ae_focus(
       data = df_adverse_events,
       include = c(any_complication, grade3_complication),
@@ -190,7 +179,7 @@ test_that("tbl_ae_focus() works", {
         include = c(any_complication, grade3_complication)
       ) %>%
       gtsummary::modify_table_body(
-        ~dplyr::filter(.x, startsWith(variable, "..soc.."))
+        ~dplyr::filter(.x, variable == "soc")
       ) %>%
       as_tibble(col_labels = FALSE),
     tibble::tribble(
@@ -227,6 +216,43 @@ test_that("tbl_ae_focus() works", {
       ) %>%
       dplyr::select(label = system_organ_class, stat_2_2),
     ignore_attr = TRUE
+  )
+
+  # test that the columns still appear when no TRUE values are observed.
+  expect_equal(
+    df_adverse_events %>%
+      dplyr::mutate(
+        all_false = FALSE
+      ) %>%
+      tbl_ae_focus(
+        include = all_false,
+        id = patient_id,
+        ae = adverse_event
+      ) %>%
+      as_tibble(fmt_missing = FALSE, col_labels = FALSE) %>%
+      dplyr::pull(2) %>%
+      unique(),
+    NA_character_
+  )
+
+  # test to ensure formatting missing value cells are added to AEs, when no missing are present in SOC
+  expect_equal(
+    df_adverse_events %>%
+      dplyr::mutate(
+        grade = ifelse(grade == 5 & adverse_event == "Anaemia", 4L, grade),
+        grade5_complication = grade == 5) %>%
+      tbl_ae_focus(
+        include = grade5_complication,
+        id = patient_id,
+        id_df = df_patient_characteristics,
+        ae = adverse_event,
+        soc = system_organ_class
+      ) %>%
+      purrr::pluck("table_styling", "fmt_missing") %>%
+      dplyr::select(column, symbol),
+    structure(list(column = c("stat_1_1", "stat_2_1", "stat_3_1"),
+                   symbol = c("—", "—", "—")), row.names = c(NA, -3L), class = c("tbl_df",
+                                                                                 "tbl", "data.frame"))
   )
 
 })

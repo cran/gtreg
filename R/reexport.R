@@ -51,11 +51,6 @@ dplyr::last_col
 #' @export
 dplyr::one_of
 
-# knitr ------------------------------------------------------------------------
-#' @export
-#' @importFrom knitr knit_print
-knitr::knit_print
-
 # tibble -----------------------------------------------------------------------
 #' @export
 #' @importFrom tibble as_tibble
@@ -73,6 +68,10 @@ gtsummary::as_flex_table
 #' @importFrom gtsummary as_hux_table
 #' @export
 gtsummary::as_hux_table
+
+#' @importFrom gtsummary as_hux_xlsx
+#' @export
+gtsummary::as_hux_xlsx
 
 #' @importFrom gtsummary as_kable
 #' @export
@@ -145,4 +144,20 @@ gtsummary::style_sigfig
 #' @importFrom gtsummary style_percent
 #' @export
 gtsummary::style_percent
+
+#' @importFrom gtsummary all_continuous
+#' @export
+gtsummary::all_continuous
+
+#' @importFrom gtsummary all_continuous2
+#' @export
+gtsummary::all_continuous2
+
+#' @importFrom gtsummary all_categorical
+#' @export
+gtsummary::all_categorical
+
+#' @importFrom gtsummary all_stat_cols
+#' @export
+gtsummary::all_stat_cols
 

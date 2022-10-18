@@ -183,7 +183,16 @@ add_overall.tbl_ae <- function(x, across = NULL, ...) {
   }
 
   # merging tbl_overall with original call -------------------------------------
-  tbl_final <- gtsummary::tbl_merge(list(x, tbl_overall), tab_spanner = FALSE)
+  tbl_final <-
+    gtsummary::tbl_merge(list(x, tbl_overall), tab_spanner = FALSE) %>%
+    # re-ordering rows to be the same as before the merge
+    gtsummary::modify_table_body(
+      ~ dplyr::left_join(
+        x$table_body %>% select(variable, row_type, label),
+        .x,
+        by  = c("variable", "row_type", "label")
+      )
+    )
 
   # grouping columns with same spanning header together ------------------------
   if (across %in% c("both", "by") && !is.null(x$inputs$strata)) {
@@ -193,14 +202,14 @@ add_overall.tbl_ae <- function(x, across = NULL, ...) {
       purrr::map(
         ~ tbl_final$table_styling$header %>%
           filter(.data$spanning_header %in% .x) %>%
-          dplyr::pull(.data$column)
+          dplyr::pull("column")
       ) %>%
       unlist()
 
     tbl_final <-
       tbl_final %>%
       gtsummary::modify_table_body(
-        ~dplyr::relocate(.x, !!!column_order, .after = .data$label)
+        ~dplyr::relocate(.x, !!!column_order, .after = "label")
       )
   }
 

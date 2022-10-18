@@ -8,7 +8,8 @@
 [![R-CMD-check](https://github.com/shannonpileggi/gtreg/workflows/R-CMD-check/badge.svg)](https://github.com/shannonpileggi/gtreg/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/shannonpileggi/gtreg/branch/main/graph/badge.svg)](https://app.codecov.io/gh/shannonpileggi/gtreg?branch=main)
-<!-- [![CRAN status](https://www.r-pkg.org/badges/version/gtreg)](https://CRAN.R-project.org/package=gtreg) -->
+[![CRAN
+status](https://www.r-pkg.org/badges/version/gtreg)](https://CRAN.R-project.org/package=gtreg)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
@@ -33,6 +34,16 @@ devtools::install_github("shannonpileggi/gtreg")
 
 The {gtreg} package creates tabular data summaries appropriate for
 regulatory submissions. The package builds the tables using {gtsummary}.
+
+Here are
+[slides](https://shannonpileggi.github.io/introducing-gtreg-rmed-2022/#/title-slide)
+and a [recorded talk (17 min)](https://youtu.be/DmslEfczYqM) from
+“Introducing {gtreg}: an R package to produce regulatory tables for
+clinical research” presented at the 2022 R in Medicine conference.
+
+[<img src="man/figures/Introducing-gtreg-screenshot.png"
+style="width:70.0%"
+alt="Screenshot of YouTube recording on title slide" />](https://youtu.be/DmslEfczYqM)
 
 ## Functions for adverse event (AE) reporting
 
