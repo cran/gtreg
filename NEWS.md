@@ -1,3 +1,14 @@
+# gtreg 0.3.0
+
+* Add errors for missing `soc` and `ae` in `complete_ae_data()` (#204).
+
+* Fix GitHub link on `pkgdown` site (#207).
+
+* Address deprecated `purrr::when()` and `forcats::fct_explicit_na()` (#210).
+
+* Update package versions for dependencies.
+
+
 # gtreg 0.2.0
 
 Documentation:
