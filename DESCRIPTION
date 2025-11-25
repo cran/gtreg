@@ -1,6 +1,6 @@
 Package: gtreg
 Title: Regulatory Tables for Clinical Research
-Version: 0.4.1
+Version: 0.4.2
 Authors@R: c(
     person("Shannon", "Pileggi", , "shannon.pileggi@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-7732-4164")),
@@ -27,12 +27,13 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 NeedsCompilation: no
-Packaged: 2025-02-26 16:29:03 UTC; sjobergd
-Author: Shannon Pileggi [aut, cre, cph]
-    (<https://orcid.org/0000-0002-7732-4164>),
-  Daniel D. Sjoberg [aut] (<https://orcid.org/0000-0003-0862-2018>)
+Packaged: 2025-11-25 15:26:27 UTC; pileggis
+Author: Shannon Pileggi [aut, cre, cph] (ORCID:
+    <https://orcid.org/0000-0002-7732-4164>),
+  Daniel D. Sjoberg [aut] (ORCID:
+    <https://orcid.org/0000-0003-0862-2018>)
 Maintainer: Shannon Pileggi <shannon.pileggi@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-02-27 09:30:02 UTC
+Date/Publication: 2025-11-25 15:52:06 UTC
